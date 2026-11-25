@@ -1,0 +1,78 @@
+/* Montserrat Arabic is the primary typeface. Install your own font files with setup-fonts.py. */
+@font-face{font-family:'Montserrat Arabic Academy';src:local('Montserrat-Arabic Regular'),local('Montserrat Arabic Regular'),url('./fonts/Montserrat-Arabic-Regular.otf') format('opentype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Montserrat Arabic Academy';src:local('Montserrat-Arabic Medium'),local('Montserrat Arabic Medium'),url('./fonts/Montserrat-Arabic-Medium.otf') format('opentype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:'Montserrat Arabic Academy';src:local('Montserrat-Arabic SemiBold'),local('Montserrat Arabic SemiBold'),url('./fonts/Montserrat-Arabic-SemiBold.otf') format('opentype');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:'Montserrat Arabic Academy';src:local('Montserrat-Arabic Bold'),local('Montserrat Arabic Bold'),url('./fonts/Montserrat-Arabic-Bold.otf') format('opentype');font-style:normal;font-weight:700;font-display:swap}
+:root{--font-ar:'Montserrat Arabic Academy','Montserrat-Arabic',Tahoma,Arial,sans-serif;--font-en:'Montserrat Arabic Academy','Montserrat-Arabic',Arial,sans-serif;--reading-width:1010px}
+html{font-size:16px;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{font-family:var(--font-ar);font-size:16px;line-height:1.95;font-weight:400;text-rendering:optimizeLegibility;font-synthesis:none}
+button,input,textarea,select{font-family:var(--font-ar)}
+.site-header{min-height:76px;height:auto;padding-block:10px}
+.header-main{font-family:var(--font-ar);font-weight:700;font-size:15px;line-height:1.5}
+.brand small,.header-sub{font-size:12px;line-height:1.5}
+.icon-btn,.top-pill,.nav-mobile{font-size:13px;font-weight:600}
+.sidebar-label{font-size:12px;letter-spacing:0;font-weight:700}
+.vol-label strong{font-family:var(--font-ar);font-size:13.5px;font-weight:700;line-height:1.65}
+.vol-label small{font-family:var(--font-en);font-size:11.5px;line-height:1.5}
+.volnum{font-size:14px}.weight{font-size:12px}
+.contents-links a{font-family:var(--font-ar);font-size:13px;line-height:1.8;padding-block:9px}
+.contents-links .nested{font-size:12.5px}
+.main{min-width:0}
+.main>.study-hero,.main>.study-card,.main>.utility-bar,.main>.search-count,.main>.home-hero,.main>.home-grid,.main>.hint,.main>.footer{max-width:var(--reading-width);margin-left:auto;margin-right:auto}
+.breadcrumb{font-size:13px}.search-wrap input{font-size:14px}.search-count{font-size:13px}
+.study-hero h1{font-family:var(--font-ar);font-size:clamp(27px,3vw,39px);line-height:1.65;font-weight:700}
+.study-hero .hero-en{font-family:var(--font-en);font-size:17px;line-height:1.7}
+.eyebrow{font-family:var(--font-en);font-size:12px}
+.hero-tags span{font-size:13px}
+.study-card{overflow-wrap:break-word;line-height:1.95}
+.study-card h1{font-family:var(--font-ar);font-size:clamp(23px,2.3vw,30px);line-height:1.6;font-weight:700}
+.study-card h2{font-family:var(--font-ar);font-size:clamp(20px,2vw,25px);line-height:1.65;font-weight:700}
+.study-card h3{font-family:var(--font-ar);font-size:18px;line-height:1.7;font-weight:600}
+.study-card p{font-family:var(--font-ar);font-size:16px;line-height:2.05;font-weight:400}
+.study-card li{font-family:var(--font-ar);font-size:15.5px;line-height:2;margin-bottom:8px}
+.study-card strong,.study-card b{font-weight:700}
+.study-card .eng,.study-card .subtitle{font-size:14px;line-height:1.8}
+.study-card .label,.study-card .eyebrow,.study-card .qtitle{font-family:var(--font-en);font-size:12px;letter-spacing:0;line-height:1.6}
+.study-card .exam,.study-card .deep{padding:18px 20px}
+.study-card .node{font-size:14px;line-height:1.8}
+.study-card .caption,.study-card figcaption{font-size:13.5px;line-height:1.85}
+.study-card table{font-family:var(--font-ar);font-size:14px;line-height:1.85}
+.study-card td,.study-card th{padding:13px 15px;vertical-align:top}
+.study-card th{font-weight:700;font-size:14px}
+.study-card .formula{font-family:var(--font-en);font-size:15px;line-height:1.8;unicode-bidi:isolate}
+.study-card .q,.study-card .question{padding:19px;line-height:1.95}
+.study-card .q .question,.study-card .question .questiontext{font-family:var(--font-en);font-size:15px;line-height:1.85}
+.study-card .opts,.study-card .choice{font-family:var(--font-en);font-size:14.5px;line-height:1.85}
+.study-card .choice{padding:9px 12px}
+.study-card .answer p{font-size:15px}
+.study-card .answer h3{font-size:16px}
+.study-card .badge{font-size:12px}
+.complete-btn{font-size:13px}.answer-reveal summary{font-size:15px;font-weight:700}
+.footer{font-size:13px}
+.home-hero h1{font-family:var(--font-ar);font-size:clamp(28px,3.5vw,44px);font-weight:700;line-height:1.65}
+.home-hero p{font-size:16px;line-height:1.95}
+.home-volume h2{font-family:var(--font-ar);font-size:20px;line-height:1.65}
+.home-volume p{font-family:var(--font-en);font-size:14px;line-height:1.7}
+.home-volume .goto{font-size:14px}.stats-row span{font-size:13px}.hint{font-size:15px;line-height:1.9}
+/* Avoid shrinking technical captions/labels rendered in SVG flowcharts. */
+.study-card svg text{font-family:var(--font-ar)!important}
+/* Long Latin tokens must not force horizontal page scrolling. */
+.study-card code,.study-card pre,.study-card .reference{overflow-wrap:anywhere;word-break:normal}
+.study-card pre{direction:ltr;text-align:left;overflow-x:auto}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+@media (max-width:1080px){:root{--reading-width:100%}}
+@media (max-width:780px){
+ html{font-size:16px}body{font-size:16px}
+ .site-header{min-height:70px}.header-main{font-size:13.5px}
+ .main{padding:18px 13px 70px}
+ .study-hero{padding:28px 20px}.study-hero h1{font-size:26px;line-height:1.6}
+ .study-card{padding:22px 17px}.study-card h1{font-size:23px}.study-card h2{font-size:20px}.study-card h3{font-size:17px}
+ .study-card p{font-size:15.5px;line-height:2}.study-card li{font-size:15px}
+ .study-card table{font-size:13.5px;max-width:100%;display:block;overflow-x:auto}
+ .study-card td,.study-card th{padding:10px 11px;min-width:115px}
+ .study-card .q .question,.study-card .question .questiontext{font-size:14.5px}
+ .study-card .opts,.study-card .choice{font-size:14px}
+ .home-hero{padding:30px 20px}.home-hero h1{font-size:27px}
+ .sidebar{width:min(340px,91vw)}
+}
+@media print{body{font-family:var(--font-ar);font-size:11pt}.study-card p{font-size:11pt}.study-card table{font-size:9pt}.study-card h1{font-size:18pt}.study-card h2{font-size:15pt}.study-card h3{font-size:12pt}}

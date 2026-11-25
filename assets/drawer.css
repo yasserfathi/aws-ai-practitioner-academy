@@ -1,0 +1,18 @@
+/* Universal RTL navigation drawer: hidden on desktop, tablet and mobile by default. */
+:root{--drawer-width:340px}
+.page-layout{display:block !important;max-width:none;width:100%;min-width:0}
+.main{width:100%;max-width:1320px;margin-inline:auto;min-width:0;padding-inline:clamp(14px,3.6vw,54px)}
+.nav-mobile{display:inline-flex !important;align-items:center;justify-content:center;flex:0 0 auto;min-width:44px;min-height:44px;gap:7px;font-size:19px;font-weight:700;line-height:1;cursor:pointer}
+.nav-mobile[aria-expanded="true"]{background:var(--soft);border-color:var(--accent);color:var(--accent)}
+.sidebar{position:fixed !important;top:var(--top) !important;right:0 !important;left:auto !important;bottom:0 !important;width:min(var(--drawer-width),92vw) !important;height:calc(100dvh - var(--top)) !important;max-height:calc(100dvh - var(--top)) !important;z-index:65 !important;transform:translateX(105%) !important;visibility:hidden;pointer-events:none;transition:transform .24s ease,visibility .24s ease !important;overscroll-behavior:contain;overflow-y:auto;box-shadow:-10px 0 36px rgba(10,24,45,.2)}
+body.menu-open .sidebar{transform:translateX(0) !important;visibility:visible;pointer-events:auto}
+body.menu-open::before{content:"" !important;display:block !important;position:fixed;inset:var(--top) 0 0 !important;background:rgba(7,20,40,.48);z-index:60 !important;cursor:pointer}
+body.menu-open{overflow:hidden}
+.site-header{z-index:70 !important}
+.reading-progress{z-index:80}
+.sidebar .volume-link{min-height:62px}
+.main > .home-hero,.main > .home-grid,.main > .hint,.main > .footer{max-width:1120px}
+@media(max-width:780px){.main{padding:18px 13px 70px}.nav-mobile{min-width:42px;min-height:42px}.sidebar{width:min(340px,91vw)!important}}
+@media(max-width:420px){.nav-mobile{min-width:38px;min-height:40px;padding:6px 8px}.site-header{gap:7px}}
+@media(prefers-reduced-motion:reduce){.sidebar{transition:none!important}}
+@media print{.nav-mobile,.sidebar,body.menu-open::before{display:none!important}.main{width:100%;max-width:none;padding:0}.page-layout{display:block}.site-header{display:none}}

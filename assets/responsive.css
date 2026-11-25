@@ -1,0 +1,59 @@
+/* Responsive QA patch — 2026-11-25. Loaded after typography.css. */
+:root{--top:76px}
+html{overflow-x:clip}
+body{min-width:0;overflow-x:clip}
+.site-header{height:var(--top);min-height:var(--top);padding-block:0}
+.page-layout,.main,.study-card,.study-hero,.home-hero{min-width:0}
+.study-card img,.study-card video,.study-card iframe{max-width:100%;height:auto}
+.study-card pre,.study-card .formula{max-width:100%;overflow-x:auto;white-space:pre-wrap;overflow-wrap:anywhere}
+.study-card .diagram,.study-card figure{min-width:0;max-width:100%;overflow-x:auto}
+.study-card .diagram svg,.study-card figure svg{max-width:100%;height:auto}
+.study-card .q,.study-card .answer,.study-card .choice{overflow-wrap:anywhere}
+.study-card table{max-width:100%;table-layout:auto}
+.study-card th,.study-card td{overflow-wrap:break-word;word-break:normal}
+.study-card [dir="ltr"]{unicode-bidi:isolate}
+.study-card .toc-row a{overflow-wrap:anywhere}
+@media(max-width:1080px){.site-header{gap:10px}.header-sub{display:none}}
+@media(max-width:780px){
+ :root{--top:76px}
+ .site-header{height:var(--top);min-height:var(--top);padding:0 12px}
+ .page-layout{display:block}
+ .main{padding:16px 12px 65px}
+ .sidebar{top:var(--top);height:calc(100dvh - var(--top));max-height:calc(100dvh - var(--top));overscroll-behavior:contain;padding-bottom:max(35px,env(safe-area-inset-bottom))}
+ .site-header .brand{flex:1;min-width:0;max-width:100%;overflow:hidden}
+ .site-header .brand>span:last-child{min-width:0}
+ .header-main{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .header-actions{margin-right:0;flex:0 0 auto}
+ .study-card,.study-hero,.home-hero{max-width:100%;margin-inline:auto}
+ .study-card{padding:20px 15px}
+ .study-card table{width:100%;display:block;overflow-x:auto;-webkit-overflow-scrolling:touch;white-space:normal;scrollbar-width:thin}
+ .study-card tbody,.study-card thead{min-width:max-content}
+ .study-card td,.study-card th{min-width:112px;max-width:270px;padding:10px 11px}
+ .study-card .nodes{gap:10px}
+ .study-card .node{min-width:min(150px,100%)}
+ .study-card .exam,.study-card .deep{padding:14px}
+ .study-card .q,.study-card .question{padding:14px}
+ .utility-bar{gap:12px}
+ .breadcrumb{min-width:0;overflow-wrap:anywhere}
+ .search-wrap{max-width:100%}
+ .home-grid{grid-template-columns:minmax(0,1fr)}
+ .home-volume{min-width:0}
+ body.menu-open::before{content:"";position:fixed;inset:var(--top) 0 0;background:rgba(9,20,37,.52);z-index:55}
+ body.menu-open{overflow:hidden}
+}
+@media(max-width:480px){
+ .site-header{gap:6px;padding-inline:9px}
+ .brand{gap:7px}.brand-symbol{width:35px;height:35px;border-radius:10px;font-size:12px}
+ .brand small{display:none}.header-main{font-size:12.5px;line-height:1.3}
+ .header-actions .icon-btn[onclick]{display:none}
+ .icon-btn,.nav-mobile{padding:8px 9px;font-size:12px}
+ .study-hero{padding:24px 17px}.study-hero h1{font-size:24px}
+ .study-card{padding:18px 13px}.study-card h1{font-size:21px}.study-card h2{font-size:19px}.study-card h3{font-size:17px}
+ .study-card p{font-size:15.5px;line-height:1.95}
+ .home-hero{padding:26px 17px}
+ .stats-row{gap:8px}.stats-row span{font-size:12px}
+ .hero-tags{gap:7px}.hero-tags span{font-size:12px}
+}
+@media(max-width:350px){.site-header{gap:4px}.header-main{font-size:11.5px}.icon-btn,.nav-mobile{padding:7px;font-size:11px}.brand-symbol{width:31px;height:31px}}
+@media(min-width:781px){body.menu-open::before{display:none}}
+@media print{body.menu-open::before{display:none}.study-card table{display:table;overflow:visible}.site-header{display:none}}
